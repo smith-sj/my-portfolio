@@ -404,7 +404,10 @@ details summary {
 
 
 details summary::before {
-    transition: 1s transform ease;
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: transform 0.6s ease-out;
+    -o-transition: transform 0.6s ease-out;
+    transition: 0.6s transform ease-out;
     content: "";
     position: absolute;
     width: 25px;
