@@ -385,6 +385,10 @@ details summary {
     background-position: 100%;
 }
 
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
 details[open] summary {
     background-image: url('./assetts/lightmodecollapse.svg');
 }
