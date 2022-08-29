@@ -45,11 +45,27 @@ h1 {
     padding-left: 20px;
 }
 
+@keyframes underline {
+    from {width: 0;}
+    to {width: 100%;}
+  }
+
 h2 {
+    display: inline-block;
     color: var(--sj-black);
     font-family: var(--display-font);
-    margin: 40px 0 20px 0;
+    margin: 40px auto 20px;
 }
+
+.underline {
+    margin-top:-5px;
+    height: 2px;
+    animation: underline 1s;
+    width: 100%;
+    background-color: var(--sj-blue);
+}
+
+
 
 h3 {
     font-size: var(--body-font-size);
@@ -201,8 +217,8 @@ body header {
     .intro-para {
         display: inline;
         margin-left: 20px;
-
     }
+
 
     .mobile-main-nav {
         display: none;
@@ -378,23 +394,39 @@ details p {
 
 details summary {
     cursor: pointer;
+    position: relative;
     padding: 20px;
     background-color: var(--sj-black);
     color: var(--sj-white);
     list-style: none;
+    background-repeat: no-repeat;
+}
+
+
+details summary::before {
+    transition: 1s transform ease;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
     background-image: url('./assetts/lightmodeexpand.svg');
     background-repeat: no-repeat;
-    background-size: 25px;
-    background-origin: content-box;
-    background-position: 100%;
+    background-size: cover;
+    transform: rotate(0deg);
+    right: 20px;
 }
+
+details[open] summary::before {
+    transform: rotate(45deg);
+}
+
 /* hide marker on safari */
 details summary::-webkit-details-marker {
     display:none;
   }
 
-details[open] summary {
-    background-image: url('./assetts/lightmodecollapse.svg');
+details:hover summary h3 {
+    text-decoration: underline;
 }
 
 details[open] p {
