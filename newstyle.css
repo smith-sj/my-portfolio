@@ -185,6 +185,10 @@ body header {
 
 @media (min-width: 600px) {
 
+    body header {
+        height: 80px;
+    }
+
     .intro-container {
         display: flex;
         align-items: start;
