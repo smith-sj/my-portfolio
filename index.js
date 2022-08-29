@@ -12,7 +12,7 @@ checkBox.addEventListener('change', (event) => {
         }
     } else {
         for (i = 0; i < mobileNav.length; ++i) {
-            document.querySelector(".mobile-main-nav").style.top = "-300%"
+            document.querySelector(".mobile-main-nav").style.top = "-400%"
             // mobileNav[i].style.display = "none"
         }
     }

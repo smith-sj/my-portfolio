@@ -17,6 +17,7 @@
     --sj-peach: #f3d0a3;
     --sj-pink: #eacac0;
     --sj-red: #ED6A5A;
+    --sj-blue: #2776EA;
 }
 
 /* Adjusted custom variables for desktop */
@@ -114,7 +115,7 @@ body footer {
 
 .mobile-main-nav {
     position: relative;
-    top: -300%;
+    top: -400%;
     transition: 0.5s;
 }
 
@@ -123,7 +124,7 @@ body header {
     flex-direction: column;
     background-color: transparent;
     padding: 0px;
-    height: 80px;
+    height: 60px;
     z-index: 1;
     border-bottom: 1px solid var(--sj-black);
 }
@@ -252,10 +253,10 @@ body header {
 /* HAMBURGER MENU COMPONENT */
 
 .model-2 {
-    height: 80px;
-    width: 80px;
-    min-width: 40px;
-    min-height: 40px;
+    height: 60px;
+    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -278,7 +279,7 @@ body header {
 }
 
 .bar {
-    height: 5px;
+    height: 3px;
     width: 100%;
     display: block;
     position: relative;
@@ -301,8 +302,8 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 45px;
-    width: 45px;
+    height: 30px;
+    width: 30px;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -315,10 +316,10 @@ label {
 
 
 #mobile-menu-toggle:checked~.bar:nth-of-type(1) {
-    -moz-transform: translateY(10%) rotate(45deg);
-    -ms-transform: translateY(10%) rotate(45deg);
-    -webkit-transform: translateY(10%) rotate(45deg);
-    transform: translateY(400%) rotate(45deg);
+    -moz-transform: translateY(450%) rotate(45deg);
+    -ms-transform: translateY(450%) rotate(45deg);
+    -webkit-transform: translateY(450%) rotate(45deg);
+    transform: translateY(450%) rotate(45deg);
 }
 
 #mobile-menu-toggle:checked~.bar:nth-of-type(2) {
@@ -326,10 +327,10 @@ label {
 }
 
 #mobile-menu-toggle:checked~.bar:nth-of-type(3) {
-    -moz-transform: translateY(-10%) rotate(-45deg);
-    -ms-transform: translateY(-10%) rotate(-45deg);
-    -webkit-transform: translateY(-10%) rotate(-45deg);
-    transform: translateY(-400%) rotate(-45deg);
+    -moz-transform: translateY(-450%) rotate(-45deg);
+    -ms-transform: translateY(-450%) rotate(-45deg);
+    -webkit-transform: translateY(-450%) rotate(-45deg);
+    transform: translateY(-450%) rotate(-45deg);
 }
 
 #mobile-menu-toggle:checked~.bar:nth-of-type(1) {
@@ -369,7 +370,6 @@ details p {
     padding: 20px;
     border: 2px solid var(--sj-black);
     border-top: none;
-    border-bottom: none;
 }
 
 details summary {
@@ -384,7 +384,7 @@ details summary {
     background-origin: content-box;
     background-position: 100%;
 }
-
+/* hide marker on safari */
 details summary::-webkit-details-marker {
     display:none;
   }
@@ -395,5 +395,5 @@ details[open] summary {
 
 details[open] p {
     color: var(--sj-white);
-    background-color: #2776EA;
+    background-color: var(--sj-blue);
 }
