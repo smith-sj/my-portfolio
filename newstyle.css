@@ -53,7 +53,6 @@ h1 {
 }
 
 
-
 h2 {
     display: inline-block;
     color: var(--sj-black);
@@ -67,7 +66,6 @@ h2 {
     width: 100%;
     background-color: var(--sj-black);
 }
-
 
 
 h3 {
@@ -471,19 +469,17 @@ details[open] p {
 
 details .underline {
     background-color: var(--sj-white);
-    animation: none;
     transition: width 0.5s ease;
     width: 0;
 }
 
 details[open] .underline {
-    width: 100%;
+    width:100%;
 }
 
 details:hover .underline {
     width: 100%;
 }
-
 
 
 .project-container {
