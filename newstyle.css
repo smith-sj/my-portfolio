@@ -122,8 +122,11 @@ body footer {
     font-family: var(--body-font-size);
     font-size: var(--small-text-size);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: var(--small-text-size);
+    align-items: center;
+    row-gap: 10px;
+    padding: 20px;
     margin-top: auto;
 }
 
@@ -626,4 +629,13 @@ textarea {
     font-family: var(--text-font);
     font-size: var(--body-font-size);
     padding: 1rem
+  }
+
+
+  .about-me {
+      margin-bottom: 50px;
+  }
+  
+  .sm-icon {
+    width: 40px;
   }
