@@ -25,18 +25,26 @@
             <nav class="main-nav">
                 <a class="desktop-nav-link" href="./index.html">About<div class="underline"></div></a>
                 <a class="desktop-nav-link" href="./projects.html">Projects<div class="underline"></div></a>
-                <a class="desktop-nav-link" href="./blog.html">Blog<div class="underline"></div></a>
+                <a class="desktop-nav-link selected" href="./contact.html">Contact<div class="underline"></div></a>
             </nav>
         </div>
         <nav class="mobile-main-nav">
             <a class="nav-link" href="./index.html">About</a>
-            <a class="nav-link selected" href="./projects.html">Projects</a>
-            <a class="nav-link" href="./blog.html">Blog</a>
+            <a class="nav-link" href="./projects.html">Projects</a>
+            <a class="nav-link" href="./contact.html">Contact</a>
         </nav>
         <script src="./index.js"></script>
     </header>
     <main>
-        <p>Main content</p>
+        <form action="https://formspree.io/f/moqbvzrl" method="POST">
+            <label for="email">Email</label>
+            <input type="email" name="email" required placeholder="email address">
+            <label for="name">Name</label>
+            <input type="text" name="name" required placeholder="name">
+            <label for="message">Message</label>
+            <textarea name="message" required placeholder="howdy..."></textarea>
+            <button class="button" type="submit">Send</button>
+        </form>
     </main>
     <footer>
         <span>Stephen Smith © 2022</span>
