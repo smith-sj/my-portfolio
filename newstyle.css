@@ -649,7 +649,12 @@ textarea {
   }
   
   .sm-icon {
+    display: inline-block;
+    height: 40px;
     width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
   }
 
 #toggle-checkbox {
