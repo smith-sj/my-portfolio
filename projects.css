@@ -1,0 +1,120 @@
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: calc(100% - 40px);
+}
+
+.project-arrow {
+    display: inline-block;
+    font-size: var(--heading-font-size);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 20px;
+    transition: margin 0.5s ease;
+}
+
+.project-grid a:hover .project-arrow {
+    margin-right: 0;
+}
+
+.project-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-container h3 {
+    align-self: start;
+    display: inline-block;
+    margin: 0;
+}
+
+.project-grid .underline {
+    animation: none;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.project-grid a:hover .underline {
+    width: 100%;
+}
+
+.project-grid a:nth-child(odd) .underline {
+    background-color: var(--sj-white);
+}
+.project-grid a:nth-child(even) .underline {
+    background-color: var(--sj-black);
+}
+
+.project-grid a:nth-child(4n-3) {
+    grid-column: span 4;
+    grid-row: span 1;
+    color: var(--sj-white);
+    background-color: var(--sj-blue);
+}
+
+.project-grid a:nth-child(4n-2) {
+    grid-column: span 4;
+    grid-row: span 1;
+    background-color: #E8E8E8;
+}
+.project-grid a:nth-child(4n-1) {
+    grid-column: span 4;
+    grid-row: span 1;
+    color: var(--sj-white);
+    background-color: var(--sj-black);
+}
+.project-grid a:nth-child(4n-0) {
+    grid-column: span 4;
+    grid-row: span 1;
+    color: var(--sj-black);
+    background-color: #27EAB8;
+}
+
+@media (min-width: 500px) {
+    .project-grid a:nth-child(4n-3) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .project-grid a:nth-child(4n-2) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .project-grid a:nth-child(4n-1) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .project-grid a:nth-child(4n-0) {
+        grid-column: span 2;
+        grid-row: span 1;
+
+    }
+}
+
+@media (min-width: 800px) {
+    .project-grid a:nth-child(4n-3) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .project-grid a:nth-child(4n-2) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .project-grid a:nth-child(4n-1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .project-grid a:nth-child(4n-0) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

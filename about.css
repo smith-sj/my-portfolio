@@ -1,0 +1,72 @@
+/* Summar / Details */
+
+
+.skills {
+    margin: 16px 0;
+}
+
+details h3 {
+    margin: 0;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+details p {
+    margin: 0;
+    padding: 20px;
+    border-top: none;
+}
+
+details summary {
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    background-color: var(--sj-black);
+    color: var(--sj-white);
+    list-style: none;
+    background-repeat: no-repeat;
+}
+
+
+details summary::before {
+    transition: 0.6s transform ease;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('./assetts/lightmodeexpand.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(0deg);
+    right: 20px;
+}
+
+details[open] summary::before {
+    transform: rotate(45deg);
+}
+
+/* hide marker on safari */
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
+
+details[open] p {
+    color: var(--sj-white);
+    background-color: var(--sj-blue);
+}
+
+
+details .underline {
+    background-color: var(--sj-white);
+    transition: width 0.5s ease;
+    width: 0;
+}
+
+details[open] .underline {
+    width:100%;
+}
+
+details:hover .underline {
+    width: 100%;
+}

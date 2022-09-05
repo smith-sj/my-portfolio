@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form label {
+    font-family: var(--display-font);
+    margin: 20px 0 5px 0;
+}
+
+form input {
+    padding: 1rem;
+    border-radius: 20px;
+    max-width: 200px;
+    font-family: var(--text-font);
+    border: 1px solid var(--sj-black);
+    font-size: var(--body-font-size);
+}
+
+textarea {
+    max-width: 600px;
+    height: 250px;
+    resize: none;
+    font-family: var(--text-font);
+    font-size: var(--body-font-size);
+    padding: 1rem
+  }
+
