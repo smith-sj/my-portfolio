@@ -1,7 +1,7 @@
 console.log('hi')
 
 const mobileNav = document.querySelectorAll('.nav-link');
-const checkBox = document.getElementById('mobile-menu-toggle');
+const checkBox = document.getElementById('mobile-menu-checkbox');
 
 checkBox.addEventListener('change', (event) => {
     console.log("hi")
