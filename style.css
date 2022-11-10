@@ -99,10 +99,6 @@ body {
 }
 
 
-body header {
-    height: 80px;
-}
-
 body main {
     max-width: 1000px;
     margin: 0 auto;
@@ -157,7 +153,7 @@ body header {
     flex-direction: column;
     background-color: transparent;
     padding: 0px;
-    height: 60px;
+    height: 80px;
     z-index: 1;
     border-bottom: 1px solid var(--sj-black);
 }
