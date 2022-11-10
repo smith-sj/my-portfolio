@@ -10,6 +10,7 @@ main a div.underline {
     transition: width 0.5s ease;
     width: 0;
     position: absolute;
+    left: 0;
 }
 
 main a:hover div.underline {
