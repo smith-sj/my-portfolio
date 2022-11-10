@@ -1,5 +1,3 @@
-console.log('hi')
-
 const mobileNav = document.querySelectorAll('.nav-link');
 const checkBox = document.getElementById('mobile-menu-checkbox');
 

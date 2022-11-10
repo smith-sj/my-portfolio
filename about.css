@@ -1,5 +1,57 @@
 /* Summar / Details */
 
+/* Introduction Section */
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+img {
+    margin: 0 20px 20px 0;
+    max-height: 250px;
+    max-width: 250px;
+    box-shadow: 10px 10px var(--sj-black);
+}
+
+
+.intro-para {
+    font-family: var(--display-font);
+    font-size: var(--subheading-font-size);
+    color: var(--sj-black);
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+
+    .intro-wrapper .button {
+        margin: 20px 0 0 30px;
+    }
+
+    body header {
+        height: 80px;
+    }
+
+    .introduction {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        flex-direction: row;
+        row-gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .intro-para {
+        display: inline;
+        margin-left: 30px;
+        max-width: 500px;
+    }
+
+}
+
+/* Skills Section */
 
 .skills {
     margin: 16px 0;
@@ -69,4 +121,10 @@ details[open] .underline {
 
 details:hover .underline {
     width: 100%;
+}
+
+/* About Me Section */
+
+.about-me {
+    margin-bottom: 50px;
 }
