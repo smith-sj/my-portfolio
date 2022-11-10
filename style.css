@@ -208,6 +208,10 @@ body header {
     border: 2px solid transparent;
 }
 
+div a.button {
+    margin: 50px 0 50px 0;
+}
+
 .intro-wrapper .button {
     margin: 20px auto 0 auto;
 }
