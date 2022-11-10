@@ -153,7 +153,7 @@ body header {
     flex-direction: column;
     background-color: transparent;
     padding: 0px;
-    height: 80px;
+    height: 60px;
     z-index: 1;
     border-bottom: 1px solid var(--sj-black);
 }
@@ -264,6 +264,7 @@ body header {
     }
 
     body header {
+        height: 80px;
         display: flex;
         flex-direction: row;
         background-color: var(--sj-white);
