@@ -98,6 +98,11 @@ body {
     background-color: var(--sj-white);
 }
 
+
+body header {
+    height: 80px;
+}
+
 body main {
     max-width: 1000px;
     margin: 0 auto;
