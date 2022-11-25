@@ -115,8 +115,9 @@ details[open] .underline {
     width:100%;
 }
 
-details:hover .underline {
-    width: 100%;
+@media (min-width: 550px) {
+    details:hover .underline {
+        width: 100%;
+    }
 }
-
 /* About Me Section */
