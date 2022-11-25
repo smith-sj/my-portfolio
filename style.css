@@ -208,7 +208,16 @@ body header {
     border: 2px solid transparent;
 }
 
-div a.button {
+.project-button {
+    margin: 0;
+    background-color: transparent;
+    color: var(--sj-white);
+    border: 2px solid var(--sj-white);
+}
+
+
+
+a.button.download {
     margin: 50px 0 50px 0;
 }
 

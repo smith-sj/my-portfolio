@@ -2,34 +2,89 @@
 
 .project-grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    box-sizing: border-box;
+    gap: 2rem;
 }
 
+ .project-container:hover {
+    color: var(--sj-white);
+    background-color: var(--sj-blue);
+    border: 1px solid var(--sj-blue);
+}
+
+.project-content .project-tags {
+    overflow:visible;
+}
+
+.project-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.project-container:hover .project-buttons .button {
+    background-color: transparent;
+    border: 2px solid var(--sj-white);
+    color: var(--sj-white);
+}
+
+.project-buttons .button {
+    background-color: var(--sj-blue);
+    border: 2px solid var(--sj-blue);
+    color: var(--sj-white);
+    word-wrap: nowrap;
+    white-space: nowrap;
+    font-size: medium;
+    padding: 0.7rem 1rem;
+}
+
+.project-container:hover .project-buttons a.project-button:hover {
+    background-color: var(--sj-white);
+    border: 2px solid var(--sj-white);
+    color: var(--sj-blue);
+}
 
 .project-container {
+    flex-direction: column;
+    transition: 0.5s;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    color: var(--sj-black);
+    border: 1px solid black;
+}
+
+.project-content {
+    position: absolute;
+    padding: 1.5rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    height: calc(100% - 40px);
+    height: 100%;
 }
 
-.project-arrow {
-    display: inline-block;
-    font-size: var(--heading-font-size);
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: 20px;
-    transition: margin 0.5s ease;
+/* css-trick for making square aspect ratio */
+/* works because padding-top is 100% based off width */
+.project-container::before{
+    content:"";
+    padding-top: 100%;
+    display: block;
 }
 
-.project-grid a:hover .project-arrow {
-    margin-right: 0;
+
+.project-content p {
+    overflow: hidden;
+    flex-grow: 1;
+    font-size: medium;
 }
 
-.project-grid a {
-    text-decoration: none;
-    color: inherit;
+.project-content span {
+    white-space: wrap;
+    overflow-y: hidden;    
+    text-overflow: ellipsis;
+    font-size: var(--small-text-size);
 }
 
 .project-container h3 {
@@ -46,75 +101,5 @@
 
 .project-grid a:hover .underline {
     width: 100%;
-}
-
-.project-grid a:nth-child(odd) .underline {
     background-color: var(--sj-white);
-}
-.project-grid a:nth-child(even) .underline {
-    background-color: var(--sj-black);
-}
-
-.project-grid a:nth-child(4n-3) {
-    grid-column: span 4;
-    grid-row: span 1;
-    color: var(--sj-white);
-    background-color: var(--sj-blue);
-}
-
-.project-grid a:nth-child(4n-2) {
-    grid-column: span 4;
-    grid-row: span 1;
-    background-color: #E8E8E8;
-}
-.project-grid a:nth-child(4n-1) {
-    grid-column: span 4;
-    grid-row: span 1;
-    color: var(--sj-white);
-    background-color: var(--sj-black);
-}
-.project-grid a:nth-child(4n-0) {
-    grid-column: span 4;
-    grid-row: span 1;
-    color: var(--sj-black);
-    background-color: #27EAB8;
-}
-
-@media (min-width: 500px) {
-    .project-grid a:nth-child(4n-3) {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    .project-grid a:nth-child(4n-2) {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    .project-grid a:nth-child(4n-1) {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    .project-grid a:nth-child(4n-0) {
-        grid-column: span 2;
-        grid-row: span 1;
-
-    }
-}
-
-@media (min-width: 800px) {
-    .project-grid a:nth-child(4n-3) {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-    .project-grid a:nth-child(4n-2) {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    .project-grid a:nth-child(4n-1) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-    .project-grid a:nth-child(4n-0) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
 }
