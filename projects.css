@@ -13,6 +13,7 @@
     border: 1px solid var(--sj-blue);
 }
 
+
 .project-content .project-tags {
     overflow:visible;
 }
@@ -102,4 +103,20 @@
 .project-grid a:hover .underline {
     width: 100%;
     background-color: var(--sj-white);
+}
+
+ .project-container.scrolled-project {
+    color: var(--sj-white)!important;
+    background-color: var(--sj-blue)!important;
+    border: 1px solid var(--sj-blue)!important;
+}
+
+.project-container.scrolled-project .project-buttons .button {
+    background-color: transparent;
+    border: 2px solid var(--sj-white);
+    color: var(--sj-white);
+    word-wrap: nowrap;
+    white-space: nowrap;
+    font-size: medium;
+    padding: 0.7rem 1rem;
 }
